@@ -8,7 +8,7 @@ public class Program
         var token = "api_token";
         var client = new GitHubClient(new ProductHeaderValue("GitHubCommitParser")); //Name of your app
         client.Credentials = new Credentials(token);
-        var commits = await client.Repository.Commit.GetAll("Jevkray", ""); //Account Name / Name of your repository
+        var commits = await client.Repository.Commit.GetAll("Name", "Repos"); //Account Name / Name of your repository
 
         foreach (var commit in commits)
         {
