@@ -10,7 +10,7 @@ public class Program
         client.Credentials = new Credentials(token);
         var commits = await client.Repository.Commit.GetAll("Name", "Repos"); //Account Name / Name of your repository
 
-        foreach (var commit in commits)
+        foreach (var commit in commits) //For Example
         {
             Console.WriteLine("SHA: " + commit.Sha);
             Console.WriteLine("Commit Message: " + commit.Commit.Message);
